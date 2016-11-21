@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
     "node-tesseract": "^0.2.7"
   }
 }
