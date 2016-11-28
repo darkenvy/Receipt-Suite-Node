@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 // });
 
 app.post('/', bodyParser.json(rawSettings), function(req, res) {
+  res.setHeader('Access-Control-Allow-Credentials', true);
   fs.writeFile('images/tmp.jpg', new Buffer(req.body['base64'], 'base64'), () => {
     tess('images/tmp.jpg').then(result => {
       console.log(result);
